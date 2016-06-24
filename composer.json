@@ -1,0 +1,28 @@
+{
+  "name": "alexandervas/yii2-facebook",
+  "description": "Yii Facebook API",
+  "type": "yii2-extension",
+  "keywords": ["yii2","extension","facebook"],
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/alexandervas/yii2-facebook-sdk/issues",
+    "source": "https://github.com/alexandervas/yii2-facebook-sdk"
+  },
+  "authors": [
+    {
+      "name": "Alexander Vasyutin",
+      "email": "vasyutin4@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "*",
+    "facebook/php-sdk-v4" : "~5.0",
+    "guzzle/guzzle": "3.9.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "alexandervas\\facebook\\": ""
+    }
+  }
+}
