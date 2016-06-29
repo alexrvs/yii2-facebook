@@ -18,6 +18,21 @@ or add
 
 to the `require` section of your `composer.json` file.
 
+How to use
+ 
+ Add into config new component
+ 
+```
+ "components" => [
+        'facebook' => [
+            'class' => 'alexandervas\facebook\Facebook',
+            'appId' => 'Your app ID',
+            'secret' => 'Your secret key app',
+        ]
+    ]
+```
+
+
 ## License
 
 The MIT License (MIT)
