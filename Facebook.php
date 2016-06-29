@@ -4,10 +4,10 @@ namespace alexandervas\facebook;
 
 use Yii;
 use yii\base\Component;
-use Facebook\FacebookSession;
-use Facebook\FacebookRedirectLoginHelper;
+use Facebook\FacebookApp;
+use Facebook\Helpers\FacebookRedirectLoginHelper;
 use Facebook\FacebookRequest;
-use Facebook\GraphUser;
+use Facebook\GraphNodes\GraphUser;
 use Exception;
 
 class Facebook extends Component{
@@ -29,12 +29,13 @@ class Facebook extends Component{
         if (!Yii::$app->session->isActive) {
             Yii::$app->session->open();
         }
+        $client  = new FacebookApp($this->appId, $this->secret);
 
-        FacebookSession::setDefaultApplication($this->appId, $this->secret);
 
         $accessToken = Yii::$app->session->get('fbAccessToken');
         if ($accessToken !== null) {
-            $this->setSession(new FacebookSession($accessToken));
+            $client->getAccessToken();
+            $this->setSession($client);
         }
     }
 
@@ -43,9 +44,9 @@ class Facebook extends Component{
         return $this->session;
     }
 
-    public function setSession(FacebookSession  $session)
+    public function setSession(FacebookApp  $session)
     {
-        $this->setAccessToken($session->getToken());
+        $this->setAccessToken($session->getAccessToken());
         $this->session = $session;
     }
 
