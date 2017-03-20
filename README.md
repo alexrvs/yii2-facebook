@@ -7,13 +7,13 @@ How to install
 Either run
 
 ```
-$ php composer.phar require alexandervas/yii2-facebook
+$ php composer.phar require alexrvs/yii2-facebook
 ```
 
 or add
 
 ```
-"alexandervas/yii2-facebook"
+"alexrvs/yii2-facebook"
 ```
 
 to the `require` section of your `composer.json` file.
@@ -25,7 +25,7 @@ How to use
 ```
  "components" => [
         'facebook' => [
-            'class' => 'alexandervas\facebook\Facebook',
+            'class' => 'alexrvs\facebook\Facebook',
             'appId' => 'Your app ID',
             'secret' => 'Your secret key app',
         ]
