@@ -1,12 +1,12 @@
 {
-  "name": "alexandervas/yii2-facebook",
+  "name": "alexrvs/yii2-facebook",
   "description": "Yii Facebook API",
   "type": "yii2-extension",
   "keywords": ["yii2","extension","facebook"],
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/alexandervas/yii2-facebook-sdk/issues",
-    "source": "https://github.com/alexandervas/yii2-facebook-sdk"
+    "issues": "https://github.com/alexrvs/yii2-facebook-sdk/issues",
+    "source": "https://github.com/alexrvs/yii2-facebook-sdk"
   },
   "authors": [
     {
